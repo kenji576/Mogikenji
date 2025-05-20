@@ -27,7 +27,7 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -64,7 +64,7 @@ nav ul li a {
     cursor: pointer;
 }
 
-/* Photo */
+
 .photo img {
     width: 250px;
     height: 250px;
