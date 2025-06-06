@@ -25,6 +25,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -33,25 +34,36 @@ header .container {
     margin: 0;
 }
 
+nav {
+    display: flex;
+    transition: max-height 0.3s ease-in-out;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
+    gap: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #ccc;
 }
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 .hero {
     padding: 80px 0;
@@ -67,7 +79,7 @@ nav ul li a:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-   background-image: url('../profile.jpg');
+    background-image: url('../profile.jpg');
     background-size: cover;
     background-position: center;
     margin: 0 auto 20px;
@@ -86,7 +98,7 @@ nav ul li a:hover {
 }
 
 .blue-text {
-    color: #007bff; 
+    color: #007bff;
 }
 
 .section-title {
@@ -96,6 +108,7 @@ nav ul li a:hover {
     padding-top: 60px;
 }
 
+
 .about-me,
 .educational-attainment,
 .work-experience,
@@ -104,13 +117,24 @@ nav ul li a:hover {
     padding: 60px 0;
 }
 
-.education-list,
-.work-experience-list {
+
+.about-me .container,
+.educational-attainment .container {
+    text-align: center;
+}
+
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 20px;
 }
 
-.education-item,
-.work-experience-item {
+.education-item {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
     margin-bottom: 30px;
     padding: 20px;
     border-left: 5px solid #007bff;
@@ -118,11 +142,11 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.education-item h3,
-.work-experience-item h3 {
+.education-item h3 {
     margin-top: 0;
     color: #007bff;
 }
+
 
 .services-grid {
     display: grid;
@@ -135,12 +159,14 @@ nav ul li a:hover {
     background-color: #111;
     padding: 20px;
     border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-.service-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.service-card:hover {
+    transform: translateY(-5px);
 }
+
 
 footer {
     background-color: #111;
@@ -150,24 +176,67 @@ footer {
     position: sticky;
     bottom: 0;
     width: 100%;
+    font-size: 0.9rem;
 }
 
+
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+    }
+
+    nav.active {
+        max-height: 300px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: left;
+        padding: 10px 0;
+    }
+
     header .container {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    nav ul {
-        margin-top: 10px;
-        flex-direction: column;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .subtitle {
+        font-size: 1rem;
     }
 
-    .services-grid {
-        grid-template-columns: 1fr;
+    .section-title {
+        font-size: 1.5rem;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .education-item,
+    .service-card {
+        max-width: 90%;
+    }
+
+    .container {
+        padding: 15px;
     }
 }
