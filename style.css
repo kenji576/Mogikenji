@@ -117,11 +117,12 @@ nav ul li a:hover {
     padding: 60px 0;
 }
 
-
 .about-me .container,
-.educational-attainment .container {
+.educational-attainment .container,
+.work-experience .container {
     text-align: center;
 }
+
 
 
 .education-list {
