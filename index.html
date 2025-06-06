@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenjay H. Mogi </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kenjay H. Mogi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1 class="logo">Kenjay H. Mogi</h1>
-            <nav>
+            <div class="hamburger" id="hamburger">&#9776;</div>
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -24,12 +25,11 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="profile-image">
-                    </div>
+                <div class="profile-image"></div>
                 <h1>It's <span class="blue-text">Kenjay</span></h1>
                 <p class="subtitle">I'm a Web Developer</p>
                 <p>Hi! It's Kenjay Hidalgo Mogi, an incoming 3rd year BSCS student.</p>
-                </div>
+            </div>
         </div>
     </section>
 
@@ -37,7 +37,7 @@
         <div class="container">
             <h2 class="section-title blue-text">About Me</h2>
             <p>A passionate Computer Science student aiming to build and engage in digital solutions.</p>
-            </div>
+        </div>
     </section>
 
     <section id="education" class="educational-attainment">
@@ -46,7 +46,7 @@
             <div class="education-list">
                 <div class="education-item">
                     <h3>Bachelor of Science in Computer Science</h3>
-                    <p>Sti west negros university</p>
+                    <p>STI West Negros University</p>
                 </div>
                 <div class="education-item">
                     <h3>Senior High School Diploma</h3>
@@ -59,8 +59,8 @@
     <section id="experience" class="work-experience">
         <div class="container">
             <h2 class="section-title blue-text">Work Experience</h2>
-            <p>Worked on various projects like responsive website, inventory systems and a mobile fitness app.</p>
-            </div>
+            <p>Worked on various projects like responsive websites, inventory systems, and a mobile fitness app.</p>
+        </div>
     </section>
 
     <section id="services" class="services">
@@ -69,28 +69,28 @@
             <div class="services-grid">
                 <div class="service-card">
                     <h3 class="blue-text">Front end Development</h3>
-                    <p>Building user interfaces and experiences for websites using HTML, CSS, and JavaScript. Creating interactive and visually appealing web pages.</p>
+                    <p>Building user interfaces and experiences using HTML, CSS, and JavaScript.</p>
                 </div>
                 <div class="service-card">
                     <h3 class="blue-text">UI / UX Designer</h3>
-                    <p>Designing intuitive and user-friendly interfaces. Focusing on aesthetics, usability, and the overall user experience to create engaging digital products.</p>
+                    <p>Designing intuitive and user-friendly interfaces focused on aesthetics and usability.</p>
                 </div>
                 <div class="service-card">
                     <h3 class="blue-text">Java</h3>
-                    <p>Developing robust and scalable applications using the Java programming language. Suitable for enterprise-level software, Android apps, and more.</p>
+                    <p>Developing scalable applications using Java for various platforms.</p>
                 </div>
                 <div class="service-card">
                     <h3 class="blue-text">HTML</h3>
-                    <p>Structuring and organizing content for the web using HyperText Markup Language. The foundation for all web pages.</p>
+                    <p>Structuring and organizing content with HTML — the foundation of web pages.</p>
                 </div>
-                </div>
+            </div>
         </div>
     </section>
 
     <section id="contacts" class="contacts">
         <div class="container">
             <h2 class="section-title blue-text">Contacts</h2>
-            <p>You can reach me at email: Kenjaymogi4@gmail.com or +639851621914.</p>
+            <p>You can reach me at <a href="mailto:Kenjaymogi4@gmail.com">Kenjaymogi4@gmail.com</a> or <a href="tel:+639851621914">+63 985 162 1914</a>.</p>
         </div>
     </section>
 
@@ -99,5 +99,14 @@
             <p>&copy; 2025 Kenjay H. Mogi. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
