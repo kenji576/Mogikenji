@@ -63,7 +63,7 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-profile-image {
+.profile-image {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -71,6 +71,7 @@ profile-image {
     background-size: cover;
     background-position: center;
     margin: 0 auto 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .hero h1 {
@@ -150,7 +151,6 @@ footer {
     bottom: 0;
     width: 100%;
 }
-
 
 @media (max-width: 768px) {
     header .container {
